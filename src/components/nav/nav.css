@@ -1,0 +1,103 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+    position: sticky;
+    margin:0; 
+    z-index: 1;
+    
+}
+.navUl{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35vw;
+    color:white;
+}
+img{
+    width:25px;
+    filter:invert(1);
+    position: relative;
+    top:5px;
+    
+}
+.menuIcon{
+    display: flex;
+    background: rgb(254,197,3);
+    border-color: transparent;
+    width: 90px;
+    height:40px;
+    border-radius: 5px;
+    color:white;
+    text-align: center;
+}
+.hidden-by-default{
+    display: none;
+}
+.sb{
+    font-family: 'Kaushan Script', cursive;
+    color: rgb(254,197,3)
+}
+.down-Menu,.down-menu-open,.down-menu-close{
+    color:white;
+    background-color: rgb(33,37,41);  
+    height: 200px;
+    position: relative;
+    bottom:20px;
+    transform: translateY(-200px);
+    z-index: 0;
+}
+.ulMenu{
+    list-style-type: none;
+    display: flex;
+    align-content: space-around;
+    width: 30px;
+    flex-direction: column;
+}
+.down-menu-open{
+    display: block;
+    animation-name: open;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+.side-menu-close{
+    display: block;
+    animation: close .6s forwards linear ;
+}
+
+@keyframes open{
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes close{
+    from {
+        transform: translateY(0px)
+    }
+    to{
+        transform: translateY(-200px)
+    }
+}
+
+
+@media(max-width:990px){
+    .lnav{
+        display:none;
+    }
+    .menuIcon{
+        display: block;
+     
+
+    }
+    nav{
+        background:rgb(33,37,41) ;
+    }
+    
+}
+@media(min-width:990px){
+.down-Menu,.down-menu-open,.down-menu-close{
+        display: none;
+    }
+}
