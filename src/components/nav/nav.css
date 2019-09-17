@@ -39,7 +39,7 @@ img{
     font-family: 'Kaushan Script', cursive;
     color: rgb(254,197,3)
 }
-.down-Menu,.down-menu-open,.down-menu-close{
+div.down-Menu,.down-menu-open,.down-menu-close{
     color:white;
     background-color: rgb(33,37,41);  
     height: 200px;
@@ -62,10 +62,11 @@ img{
     animation-fill-mode: forwards;
     animation-timing-function: linear;
 }
-.side-menu-close{
+.down-menu-close{
     display: block;
-    animation: close .6s forwards linear ;
+    animation: close .2s forwards linear ;
 }
+
 
 @keyframes open{
     to{
@@ -80,7 +81,6 @@ img{
         transform: translateY(-200px)
     }
 }
-
 
 @media(max-width:990px){
     .lnav{
